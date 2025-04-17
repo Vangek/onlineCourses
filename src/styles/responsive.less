@@ -1,0 +1,65 @@
+/* 响应式设计样式 */
+
+/* 大屏幕 - 1920x1080 */
+@media (min-width: 1600px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* 中等屏幕 - 1440px */
+@media (max-width: 1440px) {
+  html {
+    font-size: calc(16px * (1440 / 1920));
+  }
+}
+
+/* 笔记本屏幕 - 1366x768 */
+@media (max-width: 1366px) {
+  html {
+    font-size: calc(16px * (1366 / 1920));
+  }
+  
+  /* 调整合作伙伴logo的大小和间距 */
+  .partner-wall .logo-container {
+    width: 140px !important;
+    height: 70px !important;
+    margin: 5px !important;
+  }
+  
+  /* 调整导航菜单 */
+  .app-header .container {
+    width: 95% !important;
+  }
+  
+  /* 调整内容区域 */
+  .section-content {
+    max-width: 90% !important;
+  }
+  
+  /* 调整图片大小 */
+  .feature-image-container {
+    transform: scale(0.9) !important;
+  }
+}
+
+/* 小屏幕 - 1280px */
+@media (max-width: 1280px) {
+  html {
+    font-size: calc(16px * (1280 / 1920));
+  }
+}
+
+/* 平板设备 - 768px */
+@media (max-width: 768px) {
+  html {
+    font-size: calc(16px * (768 / 1920));
+  }
+}
+
+/* 移动设备 - 576px */
+@media (max-width: 576px) {
+  html {
+    font-size: calc(16px * (576 / 1920));
+  }
+}

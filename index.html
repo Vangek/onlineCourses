@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 视口适配脚本
+      (function() {
+        var screenWidth = window.screen.width;
+        var scale = 1;
+
+        // 针对1366*768分辨率特殊处理
+        if (screenWidth <= 1366 && screenWidth > 1280) {
+          scale = screenWidth / 1920;
+          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1920, initial-scale=' + scale);
+        }
+        // 其他小分辨率也可以适配
+        else if (screenWidth <= 1280) {
+          scale = screenWidth / 1920;
+          document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1920, initial-scale=' + scale);
+        }
+      })();
+    </script>
+    <title>线上课程</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
